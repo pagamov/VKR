@@ -6,6 +6,18 @@
           div {
               border: 1px solid black;
           }
+          .header {
+              
+          }
+          .input {
+              
+          }
+          .log {
+              
+          }
+          .history {
+              
+          }
       </style>
       <title>Factoring</title>
       
@@ -17,6 +29,8 @@
     
     <div class="input">
         input
+        <input id="input1" type="text"></input>
+        <button type="button" onclick="send()"></button>
     </div>
     
     <div class="log">
@@ -28,6 +42,10 @@
     </div>
     
     <script type="text/javascript">
-        
+        function send() {
+            inp = document.getElementById("input1");
+            inp.value = 'send'
+            console.log('send')
+        }
     </script>
 </body></html>

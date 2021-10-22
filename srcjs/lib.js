@@ -1,0 +1,6 @@
+
+
+
+function GCD (m,n) {
+    
+}

@@ -9,6 +9,8 @@ if __name__ == "__main__":
     t = time()
 
     res = Factor(n,B)
+    
+    print(res)
 
-    print("\nans:",color(int(res[0]),"strong")+" "+color(int(res[1]),"strong"))
-    print("time:",color(round(time() - t,4),"time"))
+    # print("\nans:",color(int(res[0]),"strong")+" "+color(int(res[1]),"strong"))
+    # print("time:",color(round(time() - t,4),"time"))

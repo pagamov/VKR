@@ -30,15 +30,7 @@ def GCD(m,n):
                 m = piv
             elif n < m:
                 m = (m-n)//2
-
-def eratosthenes(n):
-    numbers = list(range(2, n + 1)) # changed from 2 to 3
-    for number in numbers:
-        if number != 0:
-            for candidate in range(2 * number, n+1, number):
-                numbers[candidate-2] = 0
-    return list(filter(lambda x: x != 0, numbers))
-
+                
 class Q:
     def __init__(self,n):
         self.n = n
@@ -81,6 +73,8 @@ def tonelli(n, p):
         m = i
     return r
 
+
+
 def smooth_region(L1, L2, q, primes):
     res0 = list(range(L1, L2))
     res1 = np.array([q(x) for x in range(L1, L2)])
@@ -115,33 +109,3 @@ def smooth_region(L1, L2, q, primes):
             ans.append([res0[smooth_idx],q(res0[smooth_idx]),np.copy(res2[smooth_idx])])
             
     return ans
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
-def color(data,col):
-    """
-    data: object which will be colored
-    col:  string representing color. possible values are:
-        ['data', '%', 'time', 'strong']
-    """
-    if col == "data":
-        # pink
-        return bcolors.HEADER+str(data)+bcolors.ENDC
-    elif col == "%":
-        # green (leave two digits after dot)
-        return bcolors.OKGREEN+"{:.02f}".format(float(data))+bcolors.ENDC+" %"
-    elif col == "time":
-        # light blue
-        return bcolors.OKCYAN+str(data)+bcolors.ENDC+" sec"
-    elif col == "strong":
-        # red
-        return bcolors.FAIL+str(data)+bcolors.ENDC

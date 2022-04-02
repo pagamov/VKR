@@ -82,7 +82,7 @@ def suive(q, primes):
             for i in range(len(ans)):
                 smooth_numbers.append(ans[i])
             k+=1
-            print("Total number of smooth numbers:",color(len(smooth_numbers),'data'))
+            print("\rTotal number of smooth numbers:",color(len(smooth_numbers),'data'))
             if len(smooth_numbers) > len(primes):
                 # Выброс из функции
                 if Smooth_save:
